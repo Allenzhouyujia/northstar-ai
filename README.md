@@ -8,6 +8,8 @@ wildfires, blizzards and aircraft failures better than rule-based dispatch.
 > NORTHSTAR AI is a research simulation and decision-support prototype. It is not
 > approved for real-world flight operations, medical decisions, or aviation dispatch.
 
+**Live site and 1:18 demo video:** <https://northstar-ai-gules.vercel.app>
+
 ## The problem and the research question
 
 Nunavut's 25 communities have no roads between them. Medical evacuations,
@@ -106,6 +108,21 @@ cd frontend && BASE_URL=http://localhost:8000 node scripts/demo_screenshots.mjs 
 
 Exact live-demo path and narration: [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md).
 Pre-flight checklist: [`docs/WAICY_READINESS_CHECKLIST.md`](docs/WAICY_READINESS_CHECKLIST.md).
+
+## Online version (Vercel)
+
+The homepage has a "Demo video" section right after the hero
+(`frontend/public/northstar-ai-demo.mp4`), linked from the hero as
+"Watch the 1:18 demo video".
+
+`vercel.json` builds the frontend into `frontend/dist` and serves the FastAPI
+backend as one Python function (`api/index.py`, dependencies in
+`requirements.txt`) behind `/api/*`. Online, the start-up warm-up is off
+(`NORTHSTAR_WARMUP=0`), so each run is computed when it is clicked and takes
+longer than on a warmed-up laptop. The backend keeps one in-memory session:
+people using the site at the same time share a scenario, and a cold start
+resets it. For the competition demo, run it locally with `scripts/demo.sh`.
+Deploy with `vercel deploy --prod` from the repo root.
 
 ## Run the experiment
 

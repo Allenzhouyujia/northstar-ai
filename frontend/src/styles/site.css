@@ -187,6 +187,9 @@ a.btn { text-decoration: none; }
 .preview-grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 40px; align-items: center; margin-top: 48px; }
 .shot { margin: 0; border: 1px solid var(--line-2); border-radius: var(--r-2); overflow: hidden; background: var(--bg-1); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55); }
 .shot img { display: block; width: 100%; height: auto; }
+.video-shot { margin-top: 40px; }
+.shot video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+.hero-video { margin: 18px 0 0; }
 @media (max-width: 900px) { .preview-grid { grid-template-columns: 1fr; gap: 28px; } }
 
 /* ---------- Evidence ---------- */

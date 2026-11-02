@@ -53,6 +53,7 @@ export function Home() {
               <a className="btn accent big" href={HREF.simulation}>Launch NORTHSTAR</a>
               <a className="btn ghost big" href={HREF.research}>View the research</a>
             </div>
+            <p className="hero-video"><a className="more" href={`${HREF.home}#demo-video`}>Watch the 1:18 demo video ↓</a></p>
             <p className="hero-note">{disclaimer}</p>
           </div>
           <div className="hero-loop">
@@ -60,6 +61,12 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <Section id="demo-video" eyebrow="Demo video" title="NORTHSTAR AI in 78 seconds" lead="A recorded walkthrough of the project and the command center. Turn the sound on.">
+        <figure className="shot video-shot">
+          <video src="/northstar-ai-demo.mp4" poster="/northstar-ai-demo-poster.jpg" controls playsInline preload="metadata" />
+        </figure>
+      </Section>
 
       <Section id="situation" eyebrow="Situation" title="The human problem" lead="In Nunavut, no community is connected to another by road. Aviation is not transportation; it is the supply line.">
         <ul className="tiles4">

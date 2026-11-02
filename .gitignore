@@ -25,3 +25,8 @@ datasets/raw/statcan/98100002_MetaData.csv
 
 # Experiment scratch (committed results live in experiments/results/)
 experiments/scratch/
+
+# Local Vercel test venv and CLI link
+.venv-vercel/
+.vercel/
+.env*.local
